@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sri Sathya Sai District Police</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#172b4d;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#061b3a,#0b3f7a);
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:55px;
+    height:55px;
+    border:2px solid white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.title h1{
+    font-size:19px;
+    letter-spacing:1px;
+}
+
+.title p{
+    font-size:11px;
+    color:#c7dcf5;
+    margin-top:4px;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#8ec5ff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:500px;
+    padding:70px 7%;
+    background:linear-gradient(135deg,#071b38,#0d4b8e);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero small{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:25px;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.hero h2{
+    font-size:60px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    color:#8fc5ff;
+}
+
+.hero p{
+    color:#d8e6f5;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:7px;
+    text-decoration:none;
+    margin-right:10px;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:white;
+    color:#0a3970;
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.5);
+    color:white;
+}
+
+/* SHIELD */
+
+.shield{
+    width:260px;
+    height:300px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.shield-icon{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.shield h3{
+    font-size:18px;
+}
+
+.shield p{
+    font-size:12px;
+    color:#abc6e3;
+    margin-top:7px;
+}
+
+/* SECTION */
+
+section{
+    padding:70px 7%;
+}
+
+.section-title{
+    margin-bottom:30px;
+}
+
+.section-title small{
+    color:#2774c7;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:32px;
+    margin-top:5px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    border:1px solid #e0e8f2;
+    box-shadow:0 8px 25px rgba(0,40,90,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card-icon{
+    font-size:30px;
+}
+
+.card h3{
+    font-size:14px;
+    color:#718198;
+    margin-top:15px;
+}
+
+.card strong{
+    display:block;
+    font-size:32px;
+    margin-top:5px;
+}
+
+/* MODULES */
+
+.modules-section{
+    background:#eaf1f8;
+}
+
+.modules{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.module{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    text-decoration:none;
+    color:#172b4d;
+    border:1px solid #dde7f2;
+    transition:.3s;
+}
+
+.module:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,50,100,.12);
+}
+
+.module-icon{
+    font-size:35px;
+}
+
+.module h3{
+    margin-top:15px;
+}
+
+.module p{
+    color:#718198;
+    font-size:13px;
+    margin-top:7px;
+}
+
+.module span{
+    display:block;
+    margin-top:18px;
+    color:#2774c7;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* POLICE STATIONS */
+
+.search-box{
+    width:100%;
+    padding:14px;
+    border:1px solid #d5dfeb;
+    border-radius:8px;
+    margin-bottom:25px;
+    font-size:14px;
+    outline:none;
+}
+
+.stations{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.station{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #e1e8f0;
+}
+
+.station h3{
+    font-size:14px;
+}
+
+.station p{
+    color:#7b899c;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.active{
+    display:inline-block;
+    margin-top:12px;
+    padding:5px 9px;
+    border-radius:20px;
+    background:#e5f6eb;
+    color:#16743c;
+    font-size:10px;
+    font-weight:bold;
+}
+
+/* LINKS */
+
+.links-section{
+    background:#eaf1f8;
+}
+
+.links{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.link-card{
+    background:white;
+    padding:22px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#172b4d;
+    border:1px solid #dde7f2;
+}
+
+.link-card span{
+    display:block;
+    margin-top:8px;
+    font-size:11px;
+    color:#2774c7;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061a34;
+    color:white;
+    padding:35px 7%;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer p{
+    color:#8fa7c2;
+    font-size:11px;
+    margin-top:5px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .shield{
+        display:none;
+    }
+
+    .hero h2{
+        font-size:45px;
+    }
+
+    .dashboard{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .modules{
+        grid-template-columns:1fr;
+    }
+
+    .stations{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .links{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    header{
+        padding:12px 5%;
+    }
+
+    .title h1{
+        font-size:13px;
+    }
+
+    .title p{
+        font-size:8px;
+    }
+
+    .hero{
+        padding:55px 5%;
+    }
+
+    .hero h2{
+        font-size:38px;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .dashboard,
+    .stations,
+    .links{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo-area">
+
+<div class="logo">
+AP
+</div>
+
+<div class="title">
+
+<h1>SRI SATHYA SAI DISTRICT POLICE</h1>
+
+<p>SMART POLICING • TECHNOLOGY • SERVICE</p>
+
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#modules">Modules</a>
+<a href="#stations">Police Stations</a>
+<a href="#links">Important Links</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<small>DIGITAL POLICING PORTAL</small>
+
+<h2>
+Smart Policing
+<br>
+<span>for a Safer District</span>
+</h2>
+
+<p>
+
+Technology-driven policing dashboard for
+monitoring crime, CCTNS, e-Sakshya,
+CCTV and district-level services.
+
+</p>
+
+
+<div class="buttons">
+
+<a href="#dashboard" class="btn btn-primary">
+View Dashboard
+</a>
+
+<a href="#modules" class="btn btn-secondary">
+Explore Modules
+</a>
+
+</div>
+
+</div>
+
+
+<div class="shield">
+
+<div class="shield-icon">
+★
+</div>
+
+<h3>
+SRI SATHYA SAI
+</h3>
+
+<p>
+DISTRICT POLICE
+</p>
+
+<p>
+ANDHRA PRADESH POLICE
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<div class="section-title">
+
+<small>LIVE OVERVIEW</small>
+
+<h2>District Dashboard</h2>
+
+</div>
+
+
+<div class="dashboard">
+
+
+<div class="card">
+
+<div class="card-icon">
+👮
+</div>
+
+<h3>
+POLICE STATIONS
+</h3>
+
+<strong>
+30+
+</strong>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+📁
+</div>
+
+<h3>
+FIRs
+</h3>
+
+<strong>
+1,248
+</strong>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+📱
+</div>
+
+<h3>
+e-SAKSHYA
+</h3>
+
+<strong>
+86%
+</strong>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🎥
+</div>
+
+<h3>
+CCTV ONLINE
+</h3>
+
+<strong>
+94%
+</strong>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- MODULES -->
+
+<section class="modules-section" id="modules">
+
+<div class="section-title">
+
+<small>DIGITAL SERVICES</small>
+
+<h2>
+Smart Policing Modules
+</h2>
+
+</div>
+
+
+<div class="modules">
+
+
+<a href="#" class="module">
+
+<div class="module-icon">
+📊
+</div>
+
+<h3>
+CCTNS
+</h3>
+
+<p>
+Crime & Criminal Tracking Network System
+</p>
+
+<span>
+Open Portal →
+</span>
+
+</a>
+
+
+
+<a href="#" class="module">
+
+<div class="module-icon">
+📸
+</div>
+
+<h3>
+e-Sakshya
+</h3>
+
+<p>
+Digital Evidence & Documentation
+</p>
+
+<span>
+Open Portal →
+</span>
+
+</a>
+
+
+
+<a href="#" class="module">
+
+<div class="module-icon">
+🎥
+</div>
+
+<h3>
+CCTV Monitoring
+</h3>
+
+<p>
+Camera Status & Surveillance
+</p>
+
+<span>
+Open Portal →
+</span>
+
+</a>
+
+
+
+<a href="#" class="module">
+
+<div class="module-icon">
+🚨
+</div>
+
+<h3>
+Crime Statistics
+</h3>
+
+<p>
+District Crime Analytics
+</p>
+
+<span>
+View Statistics →
+</span>
+
+</a>
+
+
+
+<a href="#" class="module">
+
+<div class="module-icon">
+🗂️
+</div>
+
+<h3>
+Reports
+</h3>
+
+<p>
+Monthly & Station-wise Reports
+</p>
+
+<span>
+View Reports →
+</span>
+
+</a>
+
+
+
+<a href="#" class="module">
+
+<div class="module-icon">
+🔗
+</div>
+
+<h3>
+Important Links
+</h3>
+
+<p>
+Police Applications & Portals
+</p>
+
+<span>
+View Links →
+</span>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- POLICE STATIONS -->
+
+<section id="stations">
+
+<div class="section-title">
+
+<small>FIELD UNITS</small>
+
+<h2>
+Police Stations
+</h2>
+
+</div>
+
+
+<input
+type="text"
+id="search"
+class="search-box"
+placeholder="Search Police Station..."
+onkeyup="searchStations()"
+>
+
+
+<div class="stations" id="stationList">
+
+
+<div class="station">
+
+<h3>
+Dharmavaram I Town PS
+</h3>
+
+<p>
+Dharmavaram
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+
+<div class="station">
+
+<h3>
+Dharmavaram II Town PS
+</h3>
+
+<p>
+Dharmavaram
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+
+<div class="station">
+
+<h3>
+Hindupur I Town PS
+</h3>
+
+<p>
+Hindupur
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+
+<div class="station">
+
+<h3>
+Hindupur II Town PS
+</h3>
+
+<p>
+Hindupur
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+
+<div class="station">
+
+<h3>
+Puttaparthi PS
+</h3>
+
+<p>
+Puttaparthi
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+
+<div class="station">
+
+<h3>
+Kadiri Town PS
+</h3>
+
+<p>
+Kadiri
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+
+<div class="station">
+
+<h3>
+Penukonda PS
+</h3>
+
+<p>
+Penukonda
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+
+<div class="station">
+
+<h3>
+Ramagiri PS
+</h3>
+
+<p>
+Ramagiri
+</p>
+
+<span class="active">
+● ACTIVE
+</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- IMPORTANT LINKS -->
+
+<section class="links-section" id="links">
+
+<div class="section-title">
+
+<small>QUICK ACCESS</small>
+
+<h2>
+Important Links
+</h2>
+
+</div>
+
+
+<div class="links">
+
+
+<a href="#" class="link-card">
+
+🔐 CCTNS Login
+
+<span>
+Access Portal →
+</span>
+
+</a>
+
+
+<a href="#" class="link-card">
+
+📱 e-Sakshya
+
+<span>
+Access Portal →
+</span>
+
+</a>
+
+
+<a href="#" class="link-card">
+
+🏢 e-Office
+
+<span>
+Access Portal →
+</span>
+
+</a>
+
+
+<a href="#" class="link-card">
+
+🪪 APOLIS
+
+<span>
+Access Portal →
+</span>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div>
+
+<b>
+SRI SATHYA SAI DISTRICT POLICE
+</b>
+
+<p>
+Andhra Pradesh Police
+</p>
+
+</div>
+
+
+<div>
+
+Smart Policing Dashboard
+
+<p>
+Technology • Transparency • Service
+</p>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+function searchStations(){
+
+let input =
+document.getElementById("search")
+.value
+.toLowerCase();
+
+let stations =
+document.querySelectorAll(".station");
+
+stations.forEach(function(station){
+
+let text =
+station.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+station.style.display="block";
+
+}else{
+
+station.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
+
+
+</body>
+
+</html>
